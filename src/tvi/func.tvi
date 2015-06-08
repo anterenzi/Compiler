@@ -1,0 +1,27 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN Sum
+: alloc 3
+: add ^%0, ^%0, %2
+: move %2, _3
+: free 3
+: PROCEND
+: PROCBEGIN main
+: alloc 9
+: move 10, _4
+: move _4, _2
+: move 20, _5
+: move _5, _1
+: param @_2
+: param @_1
+: call Sum, 2
+: move _3, _6
+: move 2, _8
+: mul _6, _8, _7
+: move _7, _0
+: print k = "VariableEntry: k, INTEGER"
+: outp _0
+: newl
+: free 9
+: PROCEND

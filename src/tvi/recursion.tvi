@@ -1,0 +1,39 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN gcd
+: alloc 9
+: move 0, %3
+: beq ^%0, _3, 8
+: goto 10
+: move ^%0, _2
+: goto 22
+: move ^%0, %2
+: bge %2, ^%0, 13
+: goto 16
+: sub %2, ^%0, %4
+: move %4, %2
+: goto 11
+: param @%2
+: param %0
+: call gcd, 2
+: move _2, %7
+: ltof _2, %8
+: move %8, _2
+: free 9
+: PROCEND
+: PROCBEGIN main
+: alloc 4
+: inp _1
+: inp _0
+: bgt _1, _0, 30
+: goto 37
+: param @_1
+: param @_0
+: call gcd, 2
+: move _2, _3
+: print $$temp6 = "VariableEntry: $$temp6, REAL"
+: foutp _3
+: newl
+: free 4
+: PROCEND

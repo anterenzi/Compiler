@@ -1,0 +1,57 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN main
+: alloc 35
+: move 1, _6
+: sub _6, 1, _5
+: move 1, _7
+: stor _7, _5, _0
+: move 2, _9
+: sub _9, 1, _8
+: move 2, _10
+: stor _10, _8, _0
+: move 3, _12
+: sub _12, 1, _11
+: move 3, _13
+: stor _13, _11, _0
+: move 4, _15
+: sub _15, 1, _14
+: move 4, _16
+: stor _16, _14, _0
+: move 5, _18
+: sub _18, 1, _17
+: move 5, _19
+: stor _19, _17, _0
+: move 1, _21
+: sub _21, 1, _20
+: load _0, _20, _22
+: print $$temp18 = "VariableEntry: $$temp18, INTEGER"
+: outp _22
+: newl
+: move 2, _24
+: sub _24, 1, _23
+: load _0, _23, _25
+: print $$temp21 = "VariableEntry: $$temp21, INTEGER"
+: outp _25
+: newl
+: move 3, _27
+: sub _27, 1, _26
+: load _0, _26, _28
+: print $$temp24 = "VariableEntry: $$temp24, INTEGER"
+: outp _28
+: newl
+: move 4, _30
+: sub _30, 1, _29
+: load _0, _29, _31
+: print $$temp27 = "VariableEntry: $$temp27, INTEGER"
+: outp _31
+: newl
+: move 5, _33
+: sub _33, 1, _32
+: load _0, _32, _34
+: print $$temp30 = "VariableEntry: $$temp30, INTEGER"
+: outp _34
+: newl
+: free 35
+: PROCEND

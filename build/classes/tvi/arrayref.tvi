@@ -1,0 +1,23 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN main
+: alloc 11
+: inp _1
+: inp _0
+: sub _1, 1, _7
+: move 6.783, _8
+: stor _8, _7, _2
+: sub _1, 1, _9
+: load _2, _9, _10
+: print a = "VariableEntry: a, INTEGER"
+: outp _1
+: newl
+: print b = "VariableEntry: b, INTEGER"
+: outp _0
+: newl
+: print $$temp4 = "VariableEntry: $$temp4, REAL"
+: foutp _10
+: newl
+: free 11
+: PROCEND

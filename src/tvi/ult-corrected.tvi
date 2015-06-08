@@ -1,0 +1,153 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN gcd
+: alloc 8
+: move 0, %3
+: ble ^%0, _3, 8
+: goto 10
+: move ^%0, _11
+: goto 21
+: move ^%0, %2
+: bge %2, ^%0, 13
+: goto 16
+: sub %2, ^%0, %4
+: move %4, %2
+: goto 11
+: param %0
+: param @%2
+: call gcd, 2
+: move _11, %7
+: move %7, _11
+: free 8
+: PROCEND
+: PROCBEGIN this
+: alloc 12
+: move 1608, %3
+: ltof _3, %2
+: fsub %2, %4
+: ltof ^%0, %5
+: beq %5, %4, 34
+: goto 31
+: ltof ^%0, %6
+: beq ^%0, %6, 42
+: goto 34
+: sub _1, _0, %7
+: move 0, %8
+: beq %7, _8, 38
+: goto 42
+: sub _2, 1, %9
+: ftol ^%0, %10
+: div ^%0, %10, %11
+: stor %11, %9, _5
+: free 12
+: PROCEND
+: PROCBEGIN that
+: alloc 6
+: move 1, %2
+: move _2, %0
+: move 7.43, %3
+: move _3, %1
+: move _0, _1
+: param @%0
+: param @%1
+: call this, 2
+: free 6
+: PROCEND
+: PROCBEGIN main
+: alloc 42
+: move 1, _14
+: move _14, _2
+: move 5, _15
+: move _15, _1
+: move 5, _16
+: ble _2, _16, 65
+: goto 80
+: move 75, _17
+: ble _1, _17, 68
+: goto 80
+: sub _2, 1, _18
+: stor _1, _18, _5
+: sub _1, 1, _19
+: sub _2, 1, _20
+: load _5, _20, _21
+: move 20, _23
+: mul _21, _23, _22
+: stor _22, _19, _5
+: move 1, _25
+: add _2, _25, _24
+: move _24, _2
+: goto 62
+: inp _1
+: inp _0
+: bgt _1, _0, 84
+: goto 92
+: param @_1
+: param @_0
+: call gcd, 2
+: move _11, _26
+: print $$temp29 = "VariableEntry: $$temp29, INTEGER"
+: outp _26
+: newl
+: goto 99
+: param @_4
+: param @_3
+: call gcd, 2
+: move _11, _27
+: print $$temp30 = "VariableEntry: $$temp30, INTEGER"
+: outp _27
+: newl
+: sub _1, 1, _28
+: move 6758, _29
+: stor _29, _28, _5
+: move 23e10, _30
+: move _30, _10
+: sub _1, 1, _31
+: load _5, _31, _32
+: print $$temp35 = "VariableEntry: $$temp35, INTEGER"
+: outp _32
+: newl
+: param @_1
+: param @_0
+: call gcd, 2
+: move _11, _33
+: param @_33
+: param @_10
+: call this, 2
+: sub _1, 1, _34
+: load _5, _34, _35
+: param @_35
+: param @_10
+: call this, 2
+: call _9999, 0
+: move 1, _36
+: move _36, _2
+: move 5, _37
+: ble _2, _37, 127
+: goto 136
+: sub _2, 1, _38
+: load _5, _38, _39
+: print $$temp42 = "VariableEntry: $$temp42, INTEGER"
+: outp _39
+: newl
+: move 1, _41
+: add _2, _41, _40
+: move _40, _2
+: goto 124
+: print h = "VariableEntry: h, INTEGER"
+: outp _4
+: newl
+: print i = "VariableEntry: i, INTEGER"
+: outp _2
+: newl
+: print x = "VariableEntry: x, INTEGER"
+: outp _1
+: newl
+: print y = "VariableEntry: y, INTEGER"
+: outp _0
+: newl
+: print z = "VariableEntry: z, INTEGER"
+: outp _3
+: newl
+: free 42
+: PROCEND

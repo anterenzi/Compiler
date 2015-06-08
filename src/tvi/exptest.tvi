@@ -1,0 +1,12 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN main
+: alloc 2
+: move 23e02, _1
+: move _1, _0
+: print x = "VariableEntry: x, REAL"
+: foutp _0
+: newl
+: free 2
+: PROCEND

@@ -1,0 +1,12 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN main
+: alloc 2
+: move 1, _1
+: move _1, _0
+: print i = "VariableEntry: i, INTEGER"
+: outp _0
+: newl
+: free 2
+: PROCEND

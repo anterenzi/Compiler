@@ -1,0 +1,30 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN two
+: alloc 5
+: add ^%0, ^%0, %3
+: move %3, %2
+: uminus %2, %4
+: move %4, _3
+: free 5
+: PROCEND
+: PROCBEGIN main
+: alloc 10
+: move 1, _4
+: move _4, _1
+: move 2, _5
+: move _5, _0
+: add _1, _0, _6
+: param @_1
+: param @_0
+: call two, 2
+: move _3, _7
+: add _6, _7, _8
+: ltof _8, _9
+: move _9, _2
+: print c = "VariableEntry: c, REAL"
+: foutp _2
+: newl
+: free 10
+: PROCEND

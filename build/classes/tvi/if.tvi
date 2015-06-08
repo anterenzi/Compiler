@@ -1,0 +1,97 @@
+CODE
+: call main, 0
+: exit
+: PROCBEGIN main
+: alloc 26
+: move 0, _2
+: move _2, _1
+: move 0, _3
+: beq _1, _3, 10
+: goto 15
+: print 0 = "ConstantEntry: 0, INTEGER"
+: move 0, _4
+: outp _4
+: newl
+: goto 35
+: move 1, _5
+: beq _1, _5, 18
+: goto 23
+: print 1 = "ConstantEntry: 1, INTEGER"
+: move 1, _6
+: outp _6
+: newl
+: goto 35
+: move 2, _7
+: beq _1, _7, 26
+: goto 31
+: print 2 = "ConstantEntry: 2, INTEGER"
+: move 2, _8
+: outp _8
+: newl
+: goto 35
+: print 99 = "ConstantEntry: 99, INTEGER"
+: move 99, _9
+: outp _9
+: newl
+: move 1, _10
+: move _10, _1
+: move 0, _11
+: beq _1, _11, 40
+: goto 45
+: print 0 = "ConstantEntry: 0, INTEGER"
+: move 0, _12
+: outp _12
+: newl
+: goto 65
+: move 1, _13
+: beq _1, _13, 48
+: goto 53
+: print 1 = "ConstantEntry: 1, INTEGER"
+: move 1, _14
+: outp _14
+: newl
+: goto 65
+: move 2, _15
+: beq _1, _15, 56
+: goto 61
+: print 2 = "ConstantEntry: 2, INTEGER"
+: move 2, _16
+: outp _16
+: newl
+: goto 65
+: print 99 = "ConstantEntry: 99, INTEGER"
+: move 99, _17
+: outp _17
+: newl
+: move 2, _18
+: move _18, _1
+: move 0, _19
+: beq _1, _19, 70
+: goto 75
+: print 0 = "ConstantEntry: 0, INTEGER"
+: move 0, _20
+: outp _20
+: newl
+: goto 95
+: move 1, _21
+: beq _1, _21, 78
+: goto 83
+: print 1 = "ConstantEntry: 1, INTEGER"
+: move 1, _22
+: outp _22
+: newl
+: goto 95
+: move 2, _23
+: beq _1, _23, 86
+: goto 91
+: print 2 = "ConstantEntry: 2, INTEGER"
+: move 2, _24
+: outp _24
+: newl
+: goto 95
+: print 99 = "ConstantEntry: 99, INTEGER"
+: move 99, _25
+: outp _25
+: newl
+: free 26
+: PROCEND
